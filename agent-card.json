@@ -1,0 +1,14 @@
+{
+  "name": "DGX-Spark-Telemetry-Agent",
+  "description": "Exposes hardware telemetry for a DGX Spark node.",
+  "version": "1.0.0",
+  "a2a_protocol_version": "1.0",
+  "capabilities": [
+    {
+      "name": "get_system_telemetry",
+      "description": "Returns current CPU, RAM, Disk, and GPU conditions.",
+      "endpoint": "/a2a/telemetry",
+      "method": "POST"
+    }
+  ]
+}
