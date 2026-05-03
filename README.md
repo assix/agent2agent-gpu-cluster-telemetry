@@ -64,5 +64,5 @@ python3 gpu_node_agent.py &
 ### 2. Start the Master Agent
 Edit `FLEET_NODES` in `master_agent.py` to target your cluster IPs, then run:
 ```bash
-python3 fmaster_agent.py
+python3 master_agent.py
 ```
