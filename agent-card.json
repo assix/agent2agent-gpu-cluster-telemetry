@@ -1,14 +1,43 @@
 {
-  "name": "DGX-Spark-Telemetry-Agent",
-  "description": "Exposes hardware telemetry for a DGX Spark node.",
-  "version": "1.0.0",
+  "name": "GPU-Node-Agent",
+  "description": "Exposes deep hardware telemetry for a high-performance compute node.",
+  "version": "2.0.0",
   "a2a_protocol_version": "1.0",
   "capabilities": [
     {
-      "name": "get_system_telemetry",
-      "description": "Returns current CPU, RAM, Disk, and GPU conditions.",
-      "endpoint": "/a2a/telemetry",
-      "method": "POST"
+      "name": "Processor Telemetry",
+      "category": "cpu",
+      "description": "Returns CPU architecture, load averages, utilization, and frequencies.",
+      "endpoint": "/a2a/cpu",
+      "method": "GET"
+    },
+    {
+      "name": "Accelerator Telemetry",
+      "category": "gpu",
+      "description": "Returns GPU details, thermals, power draw, memory, and utilization.",
+      "endpoint": "/a2a/gpu",
+      "method": "GET"
+    },
+    {
+      "name": "Memory Telemetry",
+      "category": "ram",
+      "description": "Returns unified memory capacity, active usage, and swap details.",
+      "endpoint": "/a2a/ram",
+      "method": "GET"
+    },
+    {
+      "name": "Storage Telemetry",
+      "category": "disk",
+      "description": "Returns NVMe capacities, mount points, and I/O counters.",
+      "endpoint": "/a2a/disk",
+      "method": "GET"
+    },
+    {
+      "name": "Network Telemetry",
+      "category": "network",
+      "description": "Returns network interface statistics, packets, and throughput.",
+      "endpoint": "/a2a/network",
+      "method": "GET"
     }
   ]
 }
